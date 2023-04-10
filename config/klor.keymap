@@ -166,5 +166,16 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+
+        gaming_layer {
+            bindings = <
+       &kp Q  &kp 0  &kp 0  &kp 0  &kp 0            &kp  &kp  &kp  &kp  &kp
+&kp 0  &kp 0    &kp    &kp    &kp    &kp            &kp  &kp  &kp  &kp  &kp  &kp
+  &kp    &kp    &kp    &kp    &kp    &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp
+                       &kp    &kp    &kp  &kp  &kp  &kp  &kp  &kp
+            >;
+
+            label = "GAMING";
+        };
     };
 };
