@@ -55,7 +55,7 @@
         compatible = "zmk,keymap";
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        // TODO: \, F-keys, home-row mods per OS, mods per OS, Screenshot, Numrow Sonderzeichen, music fwd, OS Swap
+        // TODO: mods per OS, Screenshot, OS Swap, Visualization
 
         base_layer {
             // ┌───────────────────────────────────────────────────────────┐
