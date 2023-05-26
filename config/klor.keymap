@@ -135,8 +135,8 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp EXCL         &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPS   &kp RA(U)  &kp RA(NUMBER_3)     &trans
-&trans  &kp RA(A)      &kp RA(S)    &trans      &trans       &trans                     &trans    &trans  &kp RA(N5)        &kp RA(N4)  &kp RA(O)  &trans
+           &trans         &trans    &trans      &trans       &trans                     &trans    &trans   &kp RA(U)  &kp RA(NUMBER_3)     &trans
+&trans   &kp EXCL         &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPS  &kp RA(N5)        &kp RA(N4)  &kp RA(O)  &trans
 &trans  &kp GRAVE  &kp LS(GRAVE)    &trans      &trans       &trans  &trans  &trans     &trans    &trans      &trans            &trans     &trans  &trans
                                     &trans      &trans       &trans  &trans  &trans     &trans    &trans      &trans
             >;
