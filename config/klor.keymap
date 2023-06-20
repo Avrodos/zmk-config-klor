@@ -106,10 +106,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp PG_UP  &kp KP_NUMLOCK      &kp UP  &kp EQUAL          &kp LBRC                           &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9         &kp PLUS
-&kp ESC  &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT          &kp LPAR                           &kp RPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6        &kp MINUS      &kp GRAVE
- &trans     &trans        &kp HOME  &caps_word    &kp END  &kp LEFT_BRACKET  &trans  &trans  &kp RIGHT_BRACKET  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp BACKSLASH
-                                        &trans     &trans            &trans  &trans  &trans         &kp DELETE  &kp KP_N0     &trans
+         &kp LA(RIGHT)  &kp KP_NUMLOCK      &kp UP  &kp EQUAL          &kp LBRC                           &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9         &kp PLUS
+&kp ESC   &kp LA(LEFT)        &kp LEFT    &kp DOWN  &kp RIGHT          &kp LPAR                           &kp RPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6        &kp MINUS      &kp GRAVE
+ &trans         &trans        &kp HOME  &caps_word    &kp END  &kp LEFT_BRACKET  &trans  &trans  &kp RIGHT_BRACKET  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp BACKSLASH
+                                            &trans     &trans            &trans  &trans  &trans         &kp DELETE  &kp KP_N0     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -135,10 +135,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-           &trans         &trans    &trans      &trans       &trans                     &kp AMPS    &kp F7  &kp F8  &kp F9  &kp F12
+           &trans         &trans    &trans      &trans       &trans                   &kp AMPS  &kp F7  &kp F8  &kp F9  &kp F12
 &trans   &kp EXCL         &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp F4  &kp F5  &kp F6  &kp F11  &kp F14
-&trans  &kp GRAVE  &kp LS(GRAVE)    &sl 4      &trans       &trans  &trans  &trans     &trans    &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
-                                    &trans      &trans       &trans  &trans  &trans     &trans    &trans      &trans
+&trans  &kp GRAVE  &kp LS(GRAVE)     &sl 4      &trans       &trans  &trans  &trans     &trans  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
+                                    &trans      &trans       &trans  &trans  &trans     &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
