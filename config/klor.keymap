@@ -125,19 +125,19 @@
             // └───────────────────────────────────────────────────────────┘
             /*
              ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    !    │    @    │    #    │   $     │   %     │                    │   ˆ     │    *    │    Ü    │    £    │         │
+             │         │         │         │         │         │                    │   &     │   F7    │   F8    │   F9    │  F12    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │    Ä    │         │    ß    │         │         │         │                    │         │         │         │         │    Ö    │         │
+   │         │   !     │    @    │    #    │   $     │   %     │                    │   ˆ     │   F4    │   F5    │   F6    │  F11    │   F14   │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │         │         │         │         │         │         ││        ││        ││         │         │         │         │         │         │
+   │         │   §     │    ±    │  ADJUST │         │         ││        ││        ││         │   F1    │   F2    │   F3    │  F10    │   F13   │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │ ADJUST  │         │         │         ││         │         │         │         │
+                                 │         │         │         │         ││         │         │         │         │
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-           &trans         &trans    &trans      &trans       &trans                     &trans    &trans   &kp RA(U)  &kp RA(NUMBER_3)     &trans
-&trans   &kp EXCL         &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp AMPS  &kp RA(N5)        &kp RA(N4)  &kp RA(O)  &trans
-&trans  &kp GRAVE  &kp LS(GRAVE)    &trans      &trans       &trans  &trans  &trans     &trans    &trans      &trans            &trans     &trans  &trans
+           &trans         &trans    &trans      &trans       &trans                     &kp AMPS    &kp F7  &kp F8  &kp F9  &kp F12
+&trans   &kp EXCL         &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp F4  &kp F5  &kp F6  &kp F11  &kp F14
+&trans  &kp GRAVE  &kp LS(GRAVE)    &sl 4      &trans       &trans  &trans  &trans     &trans    &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
                                     &trans      &trans       &trans  &trans  &trans     &trans    &trans      &trans
             >;
 
