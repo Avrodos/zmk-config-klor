@@ -106,10 +106,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp LA(RIGHT)  &kp KP_NUMLOCK      &kp UP  &kp EQUAL          &kp LBRC                           &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9         &kp PLUS
-&kp ESC   &kp LA(LEFT)        &kp LEFT    &kp DOWN  &kp RIGHT          &kp LPAR                           &kp RPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6        &kp MINUS      &kp GRAVE
- &trans         &trans        &kp HOME  &caps_word    &kp END  &kp LEFT_BRACKET  &trans  &trans  &kp RIGHT_BRACKET  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp BACKSLASH
-                                            &trans     &trans            &trans  &trans  &trans         &kp DELETE  &kp KP_N0     &trans
+         &kp LA(RIGHT)  &kp KP_NUMLOCK      &kp UP      &kp EQUAL          &kp LBRC                           &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9         &kp PLUS
+&kp ESC   &kp LA(LEFT)        &kp LEFT    &kp DOWN      &kp RIGHT          &kp LPAR                           &kp RPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6        &kp MINUS      &kp GRAVE
+ &trans         &trans    &kp LG(LEFT)  &caps_word  &kp LG(RIGHT)  &kp LEFT_BRACKET  &trans  &trans  &kp RIGHT_BRACKET  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp BACKSLASH
+                                            &trans         &trans            &trans  &trans  &trans         &kp DELETE  &kp KP_N0     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
