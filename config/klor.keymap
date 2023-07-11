@@ -33,7 +33,8 @@
     };
 };
 
-/ macros {
+/ {
+macros {
     mac_bt: mac_bt {
       label = "mac_bt";
       compatible = "zmk,behavior-macro";
@@ -54,6 +55,7 @@
       ;
     };
   };
+};
 
 / {
     behaviors {
