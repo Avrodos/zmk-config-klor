@@ -24,6 +24,28 @@
 #define GAMING 5
 
 / {
+    macros {
+        mac_bt: mac_bt {
+          label = "mac_bt";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+            = <&macro_tap &bt BT_SEL 0>
+            , <&macro_tap &tog 0>
+          ;
+        };
+
+        win_bt: win_bt {
+          label = "win_bt";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings
+            = <&macro_tap &bt BT_SEL 1>
+            , <&macro_tap &tog 1>
+          ;
+        };
+     };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -31,33 +53,7 @@
             then-layer = <4>;
         };
     };
-};
 
-/ {
-macros {
-    mac_bt: mac_bt {
-      label = "mac_bt";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings
-        = <&macro_tap &bt BT_SEL 0>
-        , <&macro_tap &tog 0>
-      ;
-    };
-
-    win_bt: win_bt {
-      label = "win_bt";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings
-        = <&macro_tap &bt BT_SEL 1>
-        , <&macro_tap &tog 1>
-      ;
-    };
-  };
-};
-
-/ {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
