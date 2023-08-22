@@ -26,28 +26,30 @@
 / {
     macros {
         mac_bt: mac_bt {
-          label = "mac_bt";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-            = <&macro_tap &bt BT_SEL 2>
-            , <&macro_tap &tog BASE>
-          ;
+            label = "mac_bt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_SEL 2>,
+                <&macro_tap>,
+                <&tog BASE>;
         };
-
         win_bt: win_bt {
-          label = "win_bt";
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-            = <&macro_tap &bt BT_SEL 1>
-            , <&macro_tap &tog WIN>
-          ;
+            label = "win_bt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&bt BT_SEL 1>,
+                <&macro_tap>,
+                <&tog WIN>;
         };
-     };
+    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
@@ -73,7 +75,7 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <10 11>;
             bindings = <&kp ESC>;
         };
 
@@ -81,6 +83,11 @@
             timeout-ms = <50>;
             bindings = <&kp UNDER>;
             key-positions = <23 24>;
+        };
+
+        combo_ae {
+            bindings = <&kp RA(Q)>;
+            key-positions = <0 1>;
         };
     };
 
@@ -107,9 +114,9 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                  &kp Q           &kp W        &kp E        &kp R  &kp T                                     &kp Y        &kp U        &kp I            &kp O               &kp P
-&kp TAB  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LSHFT F  &kp G                                     &kp H  &hm RSHFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI    &kp SQT
-&kp DEL           &kp Z           &kp X        &kp C        &kp V  &kp B        &kp LSHIFT  &hm C_NEXT C_PP  &kp N        &kp M    &kp COMMA          &kp DOT            &kp FSLH  &kp RSHFT
+                  &kp Q           &kp W        &kp E        &kp R      &kp T                                         &kp Y        &kp U        &kp I            &kp O               &kp P
+&kp TAB  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LSHFT F      &kp G                                         &kp H  &hm RSHFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI    &kp SQT
+&kp DEL           &kp Z           &kp X        &kp C        &kp V      &kp B        &kp LSHIFT  &hm C_NEXT C_PP      &kp N        &kp M    &kp COMMA          &kp DOT            &kp FSLH  &kp RSHFT
                                            &kp LCTRL    &kp ENTER  &mo LOWER  &kp LEFT_COMMAND         &kp RALT  &mo RAISE    &kp SPACE     &kp BSPC
             >;
 
@@ -119,12 +126,12 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         win_layer {
-                    // ┌───────────────────────────────────────────────────────────┐
+            // ┌───────────────────────────────────────────────────────────┐
 
-                    label = "WIN";
+            label = "WIN";
 
-                    // └───────────────────────────────────────────────────────────┘
-                    /*
+            // └───────────────────────────────────────────────────────────┘
+            /*
                      ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
                      │    Q    │    W    │    E    │    R    │    T    │                    │    Y    │    U    │    I    │    O    │    P    │
            ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
@@ -135,15 +142,15 @@
                                          │  CTRL   │  LOWER  │  SPACE  │   ALT   ││ CMD/WIN │  ENTER  │  RAISE  │  BSPCE  │
                                          └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
-                    bindings = <
-                          &kp Q           &kp W        &kp E        &kp R  &kp T                                     &kp Y        &kp U        &kp I            &kp O               &kp P
-        &kp TAB  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHFT F  &kp G                                     &kp H  &hm RSHFT J  &hm RGUI K  &hm RALT L  &hm RCTRL SEMI    &kp SQT
-        &kp DEL           &kp Z           &kp X        &kp C        &kp V  &kp B        &kp LSHIFT  &hm C_NEXT C_PP  &kp N        &kp M    &kp COMMA          &kp DOT            &kp FSLH  &kp RSHFT
-                                                   &kp LCTRL    &kp ENTER  &mo LOWER  &kp LEFT_COMMAND         &kp RALT  &mo RAISE    &kp SPACE     &kp BSPC
-                    >;
+            bindings = <
+               &kp Q       &kp W       &kp E        &kp R      &kp T                                         &kp Y        &kp U       &kp I       &kp O           &kp P
+&kp TAB  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHFT F      &kp G                                         &kp H  &hm RSHFT J  &hm RGUI K  &hm RALT L  &hm RCTRL SEMI    &kp SQT
+&kp DEL        &kp Z       &kp X       &kp C        &kp V      &kp B        &kp LSHIFT  &hm C_NEXT C_PP      &kp N        &kp M   &kp COMMA     &kp DOT        &kp FSLH  &kp RSHFT
+                                   &kp LCTRL    &kp ENTER  &mo LOWER  &kp LEFT_COMMAND         &kp RALT  &mo RAISE    &kp SPACE    &kp BSPC
+            >;
 
-                    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
@@ -194,10 +201,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-           &trans         &trans    &trans      &trans       &trans                   &kp AMPS  &kp F7  &kp F8  &kp F9  &kp F12
-&trans   &kp EXCL         &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp F4  &kp F5  &kp F6  &kp F11  &kp F14
-&trans  &kp GRAVE  &kp LS(GRAVE)     &sl ADJUST      &trans       &trans  &trans  &trans     &trans  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
-                                    &trans      &trans       &trans  &trans  &trans     &trans  &trans  &trans
+           &trans         &trans      &trans      &trans       &trans                   &kp AMPS  &kp F7  &kp F8  &kp F9  &kp F12
+&trans   &kp EXCL         &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                  &kp CARET  &kp F4  &kp F5  &kp F6  &kp F11  &kp F14
+&trans  &kp GRAVE  &kp LS(GRAVE)  &sl ADJUST      &trans       &trans  &trans  &trans     &trans  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
+                                      &trans      &trans       &trans  &trans  &trans     &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -223,9 +230,9 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                      &kp F12  &kp F7  &kp F8  &kp F9  &kp F14
-&trans  &bt BT_NXT         &sl ADJUST         &sl GAMING        &tog WIN        &mac_bt                      &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
-&trans  &bt BT_PRV         &sl BASE         &mo LOWER         &mo RAISE        &win_bt  &trans  &trans  &bt BT_PRV  &kp F1  &kp F2  &kp F3  &kp F10  &kp F11
+        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                     &kp F12  &kp F7  &kp F8  &kp F9  &kp F14
+&trans  &bt BT_NXT    &sl ADJUST    &sl GAMING      &tog WIN       &mac_bt                      &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
+&trans  &bt BT_PRV      &sl BASE     &mo LOWER     &mo RAISE       &win_bt  &trans  &trans  &bt BT_PRV  &kp F1  &kp F2  &kp F3  &kp F10  &kp F11
                                         &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans
             >;
 
@@ -253,7 +260,7 @@
             &kp KP_N1  &kp KP_N2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                               &kp KP_N6  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0
    &kp TAB      &kp Q      &kp W            &kp E            &kp R            &kp T                                  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6
 &kp LSHIFT      &kp A      &kp S            &kp D            &kp F            &kp G  &kp LSHIFT  &hm C_NEXT C_PP      &kp N      &kp M  &kp COMMA    &kp DOT   &kp FSLH  &kp RSHFT
-                                        &kp LCTRL            &mo LOWER        &kp SPACE    &kp LALT         &kp LGUI    &kp RET      &mo RAISE   &kp BSPC
+                                        &kp LCTRL        &mo LOWER        &kp SPACE    &kp LALT         &kp LGUI    &kp RET  &mo RAISE   &kp BSPC
             >;
         };
     };
