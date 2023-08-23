@@ -81,7 +81,7 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <10 0>;
             bindings = <&kp ESC>;
         };
 
